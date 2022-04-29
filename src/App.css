@@ -1,0 +1,89 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.container {
+  width: 550px;
+  border: 1px solid rgba(70, 69, 69, 0.192);
+  padding: 25px;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 46px -7px rgba(66, 68, 90, 0.3);
+  -moz-box-shadow: 0px 0px 46px -7px rgba(66, 68, 90, 0.3);
+  box-shadow: 0px 0px 46px -7px rgba(66, 68, 90, 0.3);
+}
+
+.todo-title {
+  padding-bottom: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(70, 69, 69, 0.3);
+}
+.todo-item, .todo-add {
+  width: 498px;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(70, 69, 69, 0.3);
+}
+.todo-item:last-child, .todo-add:last-child {
+  border-bottom: 0px;
+}
+.todo-item span {
+  width: 400px;
+  word-wrap: break-word;
+  padding: 15px 0;
+}
+.todo-delete {
+  width: 30px;
+  height: 30px;
+  background: rgba(128, 128, 128, 0.411);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 0;
+}
+.todo-buttons {
+  display: flex;
+  flex-direction: row;
+}
+.todo-add button {
+  height: 50px;
+  width: 30%;
+  background: #0d47a1;
+  border: 0;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+.todo-add button:active {
+  transform: scale(0.95);
+}
+.todo-edit {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  min-height: 50px;
+  width: 330px;
+  margin-right: 20px;
+  padding: 0 20px;
+  outline: none;
+}
+
+/*# sourceMappingURL=App.css.map */
