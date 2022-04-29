@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState, SyntheticEvent } from "react";
+import { TodoObject, TodoProps } from "../interfaces";
 
-function Todo({
+const Todo = ({
   removeTodo,
   index,
   todo,
@@ -8,15 +9,15 @@ function Todo({
   setTodos,
   setDisableDelete,
   addToLocalStorage,
-}) {
+}: TodoProps) => {
   const [editMode, setEditMode] = useState(false);
   const [editTodo, setEditTodo] = useState("");
 
-  const handleEdit = (e, index) => {
+  const handleEdit = (e: SyntheticEvent, index: number) => {
     setDisableDelete(false);
     e.preventDefault();
     if (editTodo) {
-      const editedTodo = todos.map((todo, idx) =>
+      const editedTodo = todos.map((todo: TodoObject, idx: number) =>
         idx === index ? { text: editTodo } : todo
       );
       setTodos(editedTodo);
@@ -68,6 +69,6 @@ function Todo({
       </div>
     </div>
   );
-}
+};
 
 export default Todo;
