@@ -10,8 +10,8 @@ const Todo = ({
   setDisableDelete,
   addToLocalStorage,
 }: TodoProps) => {
-  const [editMode, setEditMode] = useState(false);
-  const [editTodo, setEditTodo] = useState("");
+  const [editMode, setEditMode] = useState<boolean>(false);
+  const [editTodo, setEditTodo] = useState<string>("");
 
   const handleEdit = (e: SyntheticEvent, index: number) => {
     setDisableDelete(false);
